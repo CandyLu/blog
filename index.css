@@ -1,30 +1,116 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC');
+* {
+  -webkit-box-sizing: border-box; /*webkit對應safari&chrome，處理瀏覽器間的兼容問題*/
+          box-sizing: border-box; 
+}
 
 body {
   font-family: 'Noto Serif TC', serif;
-  padding-top: 1.5em;
+  padding: 1.5em;
+  color: #333;
+  overflow-y: scroll;
+}
+div {
+  display: block;
 }
 
-.primary {
-  color:#444444;
-  font-size: 30px;
+.header{
+  display: -webkit-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -webkit-align-items: center;
+      align-items: center;
+  -webkit-justify-content: center;
+      justify-content: center;
+  margin-bottom: 2em;
+  background-color:	#CCDDD3;
+  height: 12em;
+  
 }
 
-.title {
-  text-align: center;
-  margin-bottom: 1em;
+  .header .title {
+    text-align: center;
+    color:#333;
+    font-size: 25px;
+    box-sizing: border-box;
+  }
+  .header .social{
+    text-align: center;
+  }
+  .header .social :hover{
+    -webkit-transform: scale(1.5); /*放大1.5倍*/
+    -webkit-transition: 0.8s; /*用0.8s來做到*/
+  }
+
+#index .row {
+  margin-bottom: 3.33333em; 
 }
 
-.social{
-  text-align: center;
-}
-.social :hover{
-  -webkit-transform: scale(1.5); /*放大1.5倍*/
-  -webkit-transition: 0.8s; /*用0.8s來做到*/
-}
+.container {
+  display: -webkit-flex;
+  display: flex;
+  margin: 0 auto;
+  max-width: 50em;
+  padding: 0 2em; }
 
-.intro{
-  text-align: center;
-  color:#444444;
-  font-size: 16px;
+a {
+  color: inherit;
+  text-decoration: none; }
+
+.posts {
+    margin: -1.5em 0;
+    -webkit-flex:2;
+            flex:2;
+    
+}
+  .posts .posts-item{
+    padding: 1.5em 0;
+    display: -ms-flexbox;
+    display: flex;
+    border-top: 1px solid #e6e6e6;
+    position: relative; 
+  }
+  .posts .posts-item:nth-child(1){
+    border-top-color: transparent; 
+  }
+  .posts .posts-item .date {
+    color: #999;
+    position: absolute;
+    top: 2rem;
+    letter-spacing: 1px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    font-size: 1em;
+    margin-bottom: .5em;
+  }
+  .posts .posts-item .subtitle {
+    vertical-align: text-bottom;
+    font-weight:normal; 
+    color: #444444;
+    font-size: 1.4em;
+    margin-left: 8rem;
+    line-height: 1.4; 
+  }
+  .posts .posts-item .subtitle a {
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s; 
+  }
+  .posts .posts-item .subtitle a:hover {
+    color: #578acc;
+  }
+
+
+  #side{
+    width:190px;
+    height:260px;
+    border:1px #666 dashed;
+    margin-left: 50px;
+    margin-top:5px;
+    margin-bottom:5px;
+    -webkit-flex:1;
+    flex:1;
 }
